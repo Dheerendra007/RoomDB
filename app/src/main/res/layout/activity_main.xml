@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="userdata"
+            type="com.dk.roomdb.UserData" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:hint="User Name"
+            android:text="@{userdata.userName}"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_mobile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:hint="Mobile Number"
+            android:text="@{userdata.userMobileNumber}"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/tv_update_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Update"
+            android:onClick="updateData"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</layout>
+
